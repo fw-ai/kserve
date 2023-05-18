@@ -39,7 +39,7 @@ var (
 
 var _ ComponentImplementation = &CustomTransformer{}
 
-func NewCustomTransformer(podSpec *PodSpec) *CustomTransformer {
+func NewCustomTransformer(podSpec *v1.PodSpec) *CustomTransformer {
 	return &CustomTransformer{PodSpec: v1.PodSpec(*podSpec)}
 }
 

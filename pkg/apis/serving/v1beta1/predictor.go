@@ -59,7 +59,7 @@ type PredictorSpec struct {
 	// The field PodSpec.Containers is mutually exclusive with other predictors (i.e. TFServing). <br />
 	// 2) Provide a predictor (i.e. TFServing) and specify PodSpec
 	// overrides, you must not provide PodSpec.Containers in this case. <br />
-	PodSpec `json:",inline"`
+	v1.PodSpec `json:",inline"`
 	// Component extension defines the deployment configurations for a predictor
 	ComponentExtensionSpec `json:",inline"`
 }
