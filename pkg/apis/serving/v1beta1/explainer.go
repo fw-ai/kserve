@@ -33,7 +33,7 @@ type ExplainerSpec struct {
 	// The field PodSpec.Containers is mutually exclusive with other explainers (i.e. Alibi).
 	// 2) Users may choose to provide a Explainer (i.e. Alibi) and specify PodSpec
 	// overrides in the PodSpec. They must not provide PodSpec.Containers in this case.
-	PodSpec `json:",inline"`
+	v1.PodSpec `json:",inline"`
 	// Component extension defines the deployment configurations for explainer
 	ComponentExtensionSpec `json:",inline"`
 }

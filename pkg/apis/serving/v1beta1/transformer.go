@@ -16,6 +16,8 @@ limitations under the License.
 
 package v1beta1
 
+import v1 "k8s.io/api/core/v1"
+
 // TransformerSpec defines transformer service for pre/post processing
 type TransformerSpec struct {
 	// This spec is dual purpose. <br />
@@ -23,7 +25,7 @@ type TransformerSpec struct {
 	// The field PodSpec.Containers is mutually exclusive with other transformers. <br />
 	// 2) Provide a transformer and specify PodSpec
 	// overrides, you must not provide PodSpec.Containers in this case. <br />
-	PodSpec `json:",inline"`
+	v1.PodSpec `json:",inline"`
 	// Component extension defines the deployment configurations for a transformer
 	ComponentExtensionSpec `json:",inline"`
 }

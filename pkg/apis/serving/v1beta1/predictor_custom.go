@@ -36,7 +36,7 @@ var (
 	_ PredictorImplementation = &CustomPredictor{}
 )
 
-func NewCustomPredictor(podSpec *PodSpec) *CustomPredictor {
+func NewCustomPredictor(podSpec *v1.PodSpec) *CustomPredictor {
 	return &CustomPredictor{PodSpec: v1.PodSpec(*podSpec)}
 }
 

@@ -33,7 +33,7 @@ type CustomExplainer struct {
 
 var _ ComponentImplementation = &CustomExplainer{}
 
-func NewCustomExplainer(podSpec *PodSpec) *CustomExplainer {
+func NewCustomExplainer(podSpec *v1.PodSpec) *CustomExplainer {
 	return &CustomExplainer{PodSpec: v1.PodSpec(*podSpec)}
 }
 
