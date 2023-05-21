@@ -32,7 +32,7 @@ import (
 // KServe Constants
 var (
 	KServeName                     = "kserve"
-	KServeAPIGroupName             = "serving.kserve.io"
+	KServeAPIGroupName             = "serving.kubeflow.org"
 	KnativeAutoscalingAPIGroupName = "autoscaling.knative.dev"
 	KnativeServingAPIGroupName     = "serving.knative.dev"
 	KServeNamespace                = getEnvOrDefault("POD_NAMESPACE", "kserve")
